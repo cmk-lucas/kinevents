@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kin Évents – Inscription Mannequin</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            neonPink: "#ff4ecd",
+            neonBlue: "#4deeea",
+            neonGold: "#f5c77a",
+            glass: "rgba(255,255,255,0.08)",
+          },
+          boxShadow: {
+            neon: "0 0 40px rgba(77,238,234,0.25)",
+            goldGlow: "0 0 40px rgba(245,199,122,0.35)",
+          }
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+  .input {
+    @apply w-full px-4 py-4 rounded-xl
+    bg-black/40 backdrop-blur
+    border border-white/10
+    text-white placeholder-gray-500
+    focus:outline-none focus:ring-2 focus:ring-neonBlue
+    transition;
+  }
+
+  .textarea {
+    @apply w-full px-4 py-4 rounded-xl
+    bg-black/40 backdrop-blur
+    border border-white/10
+    text-white placeholder-gray-500
+    min-h-[130px]
+    focus:outline-none focus:ring-2 focus:ring-neonPink
+    transition;
+  }
+
+  .radio {
+    @apply flex items-center gap-2 text-gray-300 cursor-pointer;
+  }
+
+  .radio input {
+    @apply accent-neonGold;
+  }
+</style>
+
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-black via-neutral-900 to-black text-white">
+
+<!-- BACKGROUND GLOW -->
+<div class="fixed inset-0 -z-10">
+  <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-neonBlue/20 rounded-full blur-[120px]"></div>
+  <div class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-neonPink/20 rounded-full blur-[120px]"></div>
+</div>
+
+<!-- HERO HEADER -->
+<header class="relative overflow-hidden text-center px-6 pt-28 pb-24">
+
+  <!-- NEON AURA BACKGROUND -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-1/3 left-1/4 w-[480px] h-[480px] bg-neonBlue/20 rounded-full blur-[140px]"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-[480px] h-[480px] bg-neonGold/20 rounded-full blur-[160px]"></div>
+  </div>
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50">
+  <div class="mx-auto max-w-7xl px-6 py-4">
+
+    <div class="flex items-center justify-between
+                bg-black/40 backdrop-blur-xl
+                border border-white/10
+                rounded-full px-6 py-3 shadow-neon">
+
+      <!-- LEFT -->
+      <div class="flex items-center gap-3 text-xs uppercase tracking-widest text-gray-300">
+        <span class="text-neonGold font-semibold">KINSHASA</span>
+      </div>
+
+      <!-- CENTER -->
+      <div class="hidden sm:flex items-center gap-6 text-xs uppercase tracking-[0.3em] text-gray-400">
+        <span class="opacity-70">2026</span>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <a href="./gallery.html"
+           class="group relative text-xs uppercase tracking-widest text-gray-300 hover:text-white transition">
+
+          GALLERY
+
+          <!-- underline glow -->
+          <span class="absolute -bottom-1 left-0 w-0 h-px
+                       bg-gradient-to-r from-neonPink to-neonBlue
+                       transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+  <!-- BADGE -->
+  <div class="inline-flex items-center gap-3 px-6 py-2 mb-10
+              rounded-full bg-black/40 backdrop-blur-xl
+              border border-white/10 shadow-neon">
+    <span class="text-xs uppercase tracking-widest text-gray-400">
+      Nouvelle Génération
+    </span>
+    <span class="w-1 h-1 rounded-full bg-neonGold"></span>
+    <span class="text-xs uppercase tracking-widest text-neonGold">
+      Talents de Kinshasa
+    </span>
+  </div>
+
+  <!-- TITLE -->
+  <h1 class="relative text-[3.2rem] md:text-[5.5rem] lg:text-[6.5rem]
+             font-extrabold tracking-[0.25em] leading-none
+             bg-gradient-to-r from-neonGold via-white to-neonBlue
+             bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(245,199,122,0.35)]">
+    KIN ÉVENTS
+  </h1>
+
+  <!-- SUBTITLE -->
+  <p class="max-w-2xl mx-auto mt-10 text-lg md:text-xl text-gray-300 leading-relaxed">
+    Nous ne créons pas des mannequins.  
+    <span class="block mt-2 text-white font-medium">
+      Nous révélons des identités.
+    </span>
+    <span class="block mt-4 text-gray-400 text-base">
+      Mode • Mannequinat • Vidéo • Marketing
+    </span>
+  </p>
+
+  <!-- CTA PRICE -->
+  <div class="mt-12 flex justify-center">
+    <div class="group relative px-10 py-4 rounded-full
+                bg-gradient-to-r from-neonGold/90 to-neonGold
+                text-black font-semibold text-lg
+                shadow-goldGlow transition">
+
+      <!-- GLOW -->
+      <div class="absolute inset-0 rounded-full bg-neonGold opacity-40 blur-2xl -z-10 group-hover:opacity-70 transition"></div>
+
+      💳 Inscription • <span class="font-bold">20$</span>
+      <span class="ml-2 text-sm font-normal opacity-70">Airtel Money</span>
+    </div>
+  </div>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="mt-20 flex justify-center">
+    <div class="flex flex-col items-center gap-2 text-gray-500 text-xs uppercase tracking-widest">
+      <span>Découvrir</span>
+      <div class="w-5 h-8 rounded-full border border-gray-500 flex justify-center">
+        <span class="w-1 h-2 bg-neonGold rounded-full mt-1 animate-bounce"></span>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+<!-- FORM CARD -->
+<section class="relative max-w-3xl mx-auto px-4 sm:px-6 pb-28">
+
+  <!-- NEON AURA -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-neonPink/20 blur-[140px] rounded-full -z-10"></div>
+
+  <div class="relative bg-black/50 backdrop-blur-2xl
+              border border-white/10
+              rounded-3xl sm:rounded-[2.5rem]
+              px-6 py-10 sm:p-10 md:p-14
+              shadow-2xl">
+
+    <!-- TITLE -->
+    <h2 class="text-center mb-10">
+      <span class="block text-xs uppercase tracking-widest text-gray-400 mb-3">
+        Inscription Officielle
+      </span>
+      <span class="block text-3xl sm:text-4xl font-bold
+                   bg-gradient-to-r from-neonPink to-neonBlue
+                   bg-clip-text text-transparent">
+        Nouveau Mannequin
+      </span>
+    </h2>
+
+    <form onsubmit="sendWhatsApp(); return false;"
+          class="flex flex-col gap-6">
+
+      <!-- INPUTS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input id="nom" required placeholder="Nom complet" class="input">
+        <input id="age" required placeholder="Âge" class="input">
+        <input id="taille" placeholder="Taille (cm)" class="input">
+        <input id="poids" placeholder="Poids (kg)" class="input">
+        <input id="commune" placeholder="Commune" class="input">
+        <input id="phone" required placeholder="WhatsApp actif" class="input">
+      </div>
+
+      <input id="insta" placeholder="Instagram ou réseau social" class="input">
+
+      <!-- TEXTAREAS -->
+      <textarea id="raison"
+        placeholder="Pourquoi Kin Évents ?"
+        class="textarea"></textarea>
+
+      <textarea id="objectifs"
+        placeholder="Tes objectifs et tes rêves"
+        class="textarea"></textarea>
+
+      <textarea id="defaut"
+        placeholder="Ton plus grand défaut (honnêtement)"
+        class="textarea"></textarea>
+
+      <!-- EXPERIENCE -->
+      <div class="flex flex-col gap-3">
+        <p class="text-sm text-gray-300">
+          As-tu déjà une expérience ?
+        </p>
+
+        <div class="flex gap-6">
+          <label class="radio">
+            <input type="radio" name="exp" value="Oui">
+            <span>Oui</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="exp" value="Non">
+            <span>Non</span>
+          </label>
+        </div>
+      </div>
+
+      <textarea id="experience"
+        placeholder="Si oui, raconte brièvement"
+        class="textarea"></textarea>
+
+      <select id="dispo" class="input">
+        <option>Toujours dispo</option>
+        <option>Dispo selon les jours</option>
+        <option>Très peu dispo</option>
+      </select>
+
+      <textarea id="attentes"
+        placeholder="Qu’attends-tu vraiment de Kin Évents ?"
+        class="textarea"></textarea>
+
+      <!-- CTA -->
+      <button type="submit"
+        class="group relative mt-8 py-5 rounded-full
+               text-lg font-semibold text-black
+               bg-gradient-to-r from-neonPink via-neonGold to-neonBlue
+               shadow-goldGlow transition-all
+               active:scale-95">
+
+        <span class="relative z-10">Envoyer sur WhatsApp</span>
+
+        <!-- GLOW -->
+        <div class="absolute inset-0 rounded-full blur-2xl bg-neonGold/50
+                    opacity-50 group-hover:opacity-80 transition"></div>
+      </button>
+
+      <!-- FOOT NOTE -->
+      <p class="text-center text-xs text-gray-500 mt-4">
+        En envoyant, tu confirmes vouloir rejoindre Kin Évents.
+      </p>
+
+    </form>
+  </div>
+</section>
+
+
+<footer class="relative mt-24 pb-12 px-6 text-center">
+
+  <!-- TOP GLOW LINE -->
+  <div class="mx-auto mb-10 h-px w-32 bg-gradient-to-r from-transparent via-neonGold to-transparent"></div>
+
+  <!-- BRAND -->
+  <div class="flex flex-col items-center gap-4">
+    <span class="text-xs uppercase tracking-[0.35em] text-gray-400">
+      Kin Évents
+    </span>
+
+    <span class="text-sm text-gray-500 max-w-xs leading-relaxed">
+      Révéler les talents.  
+      Créer des opportunités.  
+      Construire l’avenir.
+    </span>
+  </div>
+
+  <!-- SOCIAL / SIGNATURE -->
+  <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-gray-500">
+
+    <span>
+      © 2026 · Tous droits réservés
+    </span>
+
+    <span class="hidden sm:block text-gray-600">•</span>
+
+    <span class="italic text-gray-400">
+      Designed for the future
+    </span>
+
+  </div>
+
+  <!-- BOTTOM NEON DOT -->
+  <div class="mt-6 flex justify-center">
+    <span class="w-2 h-2 rounded-full bg-neonGold shadow-goldGlow"></span>
+  </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
