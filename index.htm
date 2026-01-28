@@ -156,6 +156,43 @@
     </div>
   </div>
 
+  <!-- HYMNE NATIONAL -->
+<div class="mt-10 flex justify-center">
+  <button id="playHymne" 
+          class="relative inline-flex items-center gap-3 px-6 py-3 rounded-full
+                 bg-black/40 backdrop-blur-xl border border-white/10
+                 text-sm font-semibold text-neonGold hover:text-white
+                 hover:scale-105 transition-all shadow-neon">
+
+    <!-- ICON PLAY -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-6.518-3.759A1 1 0 007 8.168v7.664a1 1 0 001.234.97l6.518-1.879a1 1 0 000-1.82z" />
+    </svg>
+
+    Écouter l’hymne national
+  </button>
+
+  <!-- AUDIO -->
+  <audio id="audioHymne" src="audio/hymne.mp3"></audio>
+</div>
+
+<!-- JS pour jouer l’hymne -->
+<script>
+  const playButton = document.getElementById('playHymne');
+  const audio = document.getElementById('audioHymne');
+
+  playButton.addEventListener('click', () => {
+    if(audio.paused) {
+      audio.play();
+      playButton.classList.add('text-white');
+    } else {
+      audio.pause();
+      playButton.classList.remove('text-white');
+    }
+  });
+</script>
+
+
   <!-- SCROLL INDICATOR -->
   <div class="mt-20 flex justify-center">
     <div class="flex flex-col items-center gap-2 text-gray-500 text-xs uppercase tracking-widest">
