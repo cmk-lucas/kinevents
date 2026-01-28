@@ -15,17 +15,71 @@
     <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[140px] rounded-full"></div>
   </div>
 
-  <!-- HEADER -->
-  <header class="text-center px-6 pt-28 pb-20">
-    <h1 class="text-5xl md:text-7xl font-extrabold tracking-widest bg-gradient-to-r from-yellow-400 via-white to-blue-400 bg-clip-text text-transparent">
-      GALERIE
-    </h1>
+  <!-- HEADER ULTRA MODERNE GALERIE -->
+<header class="relative text-center px-6 pt-28 pb-24 overflow-hidden">
 
-    <p class="max-w-3xl mx-auto mt-8 text-gray-300 text-lg leading-relaxed">
-      Moments réels. Talents bruts.  
-      <span class="text-white font-medium">L’empreinte visuelle de Kin Évents.</span>
-    </p>
-  </header>
+  <!-- BACKGROUND NEON GLOW -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-neonGold/20 rounded-full blur-[140px] animate-pulse-slow"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-neonBlue/20 rounded-full blur-[160px] animate-pulse-slow"></div>
+  </div>
+
+  <!-- BADGE -->
+  <div class="inline-flex items-center gap-3 px-6 py-2 mb-10
+              rounded-full bg-black/40 backdrop-blur-xl
+              border border-white/10 shadow-neon">
+    <span class="text-xs uppercase tracking-widest text-gray-400">Galerie</span>
+    <span class="w-1 h-1 rounded-full bg-neonGold"></span>
+    <span class="text-xs uppercase tracking-widest text-neonGold">Kin Évents 2026</span>
+  </div>
+
+  <!-- TITLE -->
+  <h1 class="relative text-[3rem] md:text-[5rem] lg:text-[6rem] font-extrabold tracking-[0.25em] leading-none
+             bg-gradient-to-r from-neonGold via-white to-neonBlue
+             bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(245,199,122,0.35)]
+             animate-text-flicker">
+    GALERIE
+  </h1>
+
+  <!-- SUBTITLE -->
+  <p class="max-w-2xl mx-auto mt-6 text-lg md:text-xl text-gray-300 leading-relaxed">
+    Moments réels. Talents bruts.  
+    <span class="block mt-2 text-white font-medium">
+      L’empreinte visuelle de Kin Évents
+    </span>
+    <span class="block mt-4 text-gray-400 text-base">
+      Mode • Mannequinat • Vidéo • Marketing
+    </span>
+  </p>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="mt-12 flex justify-center">
+    <div class="flex flex-col items-center gap-2 text-gray-500 text-xs uppercase tracking-widest">
+      <span>Découvrir</span>
+      <div class="w-5 h-8 rounded-full border border-gray-500 flex justify-center">
+        <span class="w-1 h-2 bg-neonGold rounded-full mt-1 animate-bounce"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ANIMATIONS TAILWIND -->
+<style type="text/tailwindcss">
+@layer utilities {
+  .animate-pulse-slow {
+    @apply animate-pulse;
+    animation-duration: 6s;
+  }
+  .animate-text-flicker {
+    @apply animate-[flicker_1.5s_infinite];
+  }
+  @keyframes flicker {
+    0%,19%,21%,23%,25%,54%,56%,100% { opacity:1; }
+    20%,22%,24%,55% { opacity:0.4; }
+  }
+}
+</style>
+
 
   <!-- GALLERY GRID -->
   <main class="px-4 sm:px-6 pb-32">
@@ -189,13 +243,36 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="text-center text-gray-500 text-sm pb-12 border-t border-white/10 pt-8">
-    © 2026 — <span class="text-white font-medium">Kin Évents</span><br />
-    <span class="text-xs tracking-widest uppercase text-gray-600">
-      Kinshasa · 2026 · Gallery
-    </span>
-  </footer>
+  <!-- FOOTER ULTRA MODERNE -->
+<footer class="relative text-center px-6 py-12 bg-black/80 backdrop-blur-lg border-t border-white/10 overflow-hidden">
+
+  <!-- NEON GLOW BG -->
+  <div class="absolute -top-10 left-1/4 w-72 h-72 bg-neonGold/20 rounded-full blur-3xl animate-pulse-slow -z-10"></div>
+  <div class="absolute -bottom-10 right-1/3 w-72 h-72 bg-neonBlue/20 rounded-full blur-3xl animate-pulse-slow -z-10"></div>
+
+  <!-- FOOTER CONTENT -->
+  <p class="text-gray-400 text-sm md:text-base mb-2">
+    © 2026 — <span class="text-white font-medium">Kin Évents</span>
+  </p>
+
+  <p class="text-xs md:text-sm tracking-widest uppercase text-gray-500">
+    Kinshasa · 2026 · Gallery
+  </p>
+
+  <!-- SUBTLE LINE -->
+  <div class="mt-4 w-24 h-[1px] bg-neonGold/30 mx-auto rounded-full"></div>
+</footer>
+
+<!-- ANIMATIONS TAILWIND -->
+<style type="text/tailwindcss">
+@layer utilities {
+  .animate-pulse-slow {
+    @apply animate-pulse;
+    animation-duration: 6s;
+  }
+}
+</style>
+
 
 </body>
 </html>
